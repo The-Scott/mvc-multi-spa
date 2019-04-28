@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  background: #830004;
+}
+
+.ang-nav-bar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #cc7400;
+}
+
+.ang-nav-bar li {
+  float: left;
+}
+
+.ang-nav-bar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+.ang-nav-bar li a:hover {
+  background-color: #450200;
+}
