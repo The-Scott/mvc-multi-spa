@@ -2,7 +2,7 @@
 I had an idea. I like Multi-Page Apps (MPA), and I also like single-page apps (SPA).  I _should_ be able to have the best of both worlds right?  All the bells and whistles, plus the power of JS Frameworks, all running on demand.
 
 ## Why bother?
-Well, I was getting sick of the amout of bootstrap code I needed to write for basic stuff. A 'About Me' can be served quicked from static HTML, without loading and entire SPA Framework.
+Well, I was getting sick of the amount of bootstrap code I needed to write for basic stuff. An 'About Me' can be served quicker from static HTML, without loading an entire SPA Framework.
 
 At the same time, SPA's do all sorts of wicked things that are useful and have their place.
 
@@ -10,6 +10,11 @@ Enough of that, if you just want to know how to run it, skip down to the 'Run, R
 
 ## Preface: Wait, Where is V1?
 V1 was a full on lovecraftian horror, where I attempted to use and modofy some of the pre-done templates and 'do it myself' in an effort to learn all the things I had been putting off (like webpack).  Needless to say, it sorta worked... ish. It also fell from the ugly tree and smacked every branch on the way down. So it will forever languish in privacy, as a monument to excellent lessons learned.
+
+# The Styling, My _Eyes They *BURN*_ 
+Or, in other words, the styling is there to make sure when I was testing this, it was really, really easy to tell what-is-what. 
+- It is terrible 
+- It will make you want to claw your eyes out
 
 ## Technologies
 There are quite a few things smashed into this semi-lovecraftian horror. But its also much more _usable_. With minimal config.
@@ -81,21 +86,29 @@ Those two methods create a default handler for index.html if needed, and coupled
 The 'Full Horror' of V1 used the WebpackDevMiddleware for .NET Core - which is great is you are only ever running a SPA, but using MVC to route the rest of it. A SPA. Singular! Much easier to just ignore the routing for our SPA routes, and use the toolchains built for the frameworks!
 
 ## Aurelia
-Aurelia has its own CLI au. Package JSON has a basic watched script that will build the CLI app and recompile on the fly.
+Aurelia has its own CLI au. Package JSON has a basic watcher script that will build the CLI app and recompile on the fly.
 
 ## Angular
-Angular has the Angular CLI ng. If you look at the package JSON, there is
-a basic watcher angular, to recompile our Angular SPA on the fly.
+Angular has the Angular CLI ng. If you look at the package JSON, there is a basic watcher for angular, to recompile our Angular SPA on the fly.
 
 ## Build Pipeline
 Both SPA's are completely _decoupled_ from the actual .NET Build.
 If you build the solution, you will only get the Razor component - the semi static HTML part.
 
 # Run, Run, You Horror You
+Install aurelia-cli and @angular/cli globally for maximuim ease of use, then run npm-install from the root directory. 
 
 1.) Build & Run the .NET Project
 
 2.) Kick off the Builders/Watchers for the SPA's
 
 3.) Done - navigate the either SPA and it'll load up.
+
+# Future Work / Things to Fix
+
+- Fix the routing for MVC will passthrough and preload the SPA for SPA routes, instead of a 404 of failure.
+- Stick a few more framework into it, see what can happen
+- Fix the styling to be less _horrible_. 
+- Fix the Watchers to cleanup after themselves, at the moments, you gets lots of high-churn files. 
+- Cleanup the leftover files that are not really needed within each SPA directory
 
