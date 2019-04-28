@@ -1,0 +1,8 @@
+# Folders
+.idea/
+Multi-SPA-V2/bin/
+Multi-SPA-V2/obj/
+Multi-SPA-V2/node_modules
+
+#Files
+Multi-SPA-V2.sln.DotSettings.user
