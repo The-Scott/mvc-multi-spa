@@ -30,15 +30,7 @@
 
 
     <ItemGroup>
-      <Folder Include="Aurelia\src\resources" />
-      <Folder Include="wwwroot\css" />
-    </ItemGroup>
-
-
-    <ItemGroup>
-      <Content Include="Styling\site.css">
-        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      </Content>
+      <Folder Include="wwwroot\Aurelia" />
     </ItemGroup>
 
 </Project>

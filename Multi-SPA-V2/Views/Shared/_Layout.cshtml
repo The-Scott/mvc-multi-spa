@@ -1,39 +1,35 @@
 ﻿<header>
+  <link rel="stylesheet" href="~/css/site.css"/>
   <nav>
-      <div>
-          <a class="navbar-brand" asp-area="" asp-page="/Index">Multi_SPA_V2</a>
-          <button type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                  aria-expanded="false" aria-label="Toggle navigation">
-              <span></span>
-          </button>
-          <div>
-              <ul class="">
-                  <li class="">
-                      <a class="" asp-controller="Navigation" asp-action="Index">Home</a>
-                  </li>
-                  <li class="">
-                      <a class="" asp-controller="Navigation" asp-action="Privacy">Privacy</a>
-                  </li>
-                <li class="">
-                  <a class="" asp-controller="Aurelia" asp-action="Aurelia">Aurelia</a>
-                </li>
-                <li>
-                  <a asp-controller="Angular" asp-action="Angular">Angular</a>
-                </li>
-              </ul>
-          </div>
+    <div>
+      <div class="razor-nav">
+        <ul>
+          <li>
+            <a router-ignore asp-controller="Navigation" asp-action="Index">Home</a>
+          </li>
+          <li class="">
+            <a router-ignore asp-controller="Navigation" asp-action="Privacy">Privacy</a>
+          </li>
+          <li class="">
+            <a router-ignore asp-controller="Aurelia" asp-action="Aurelia">Aurelia</a>
+          </li>
+          <li>
+            <a router-ignore asp-controller="Angular" asp-action="Angular">Angular</a>
+          </li>
+        </ul>
       </div>
+    </div>
   </nav>
 </header>
 <div class="">
     <partial name="_CookieConsentPartial" />
-    <main role="main" class="">
+    <main role="main" class="razor-body">
         @RenderBody()
     </main>
 </div>
 
-    <footer class="border-top footer">
-        <div class="">
-            &copy; 2019 - Multi_SPA_V2 - <a asp-area="" asp-page="/Privacy">Privacy</a>
-        </div>
-    </footer>
+<footer class="footer">
+    <div class="">
+        &copy; 2019 - Multi_SPA_V2 - <a asp-controller="Navigation" asp-action="Privacy">Privacy</a>
+    </div>
+</footer>

@@ -5,8 +5,7 @@ import {PLATFORM} from 'aurelia-pal';
 
 export function configure(aurelia: Aurelia) {
   aurelia.use
-    .standardConfiguration()
-    //.feature(PLATFORM.moduleName('App'));
+    .standardConfiguration();
 
   aurelia.use.developmentLogging(environment.debug ? 'debug' : 'warn');
 

@@ -82,8 +82,10 @@
   },
   "scripts": {
     "watch:aurelia": "au build --watch",
+    "build:aurelia": "au build",
     "serve:aurelia": "au run",
     "serve:angular": "ng serve",
+    "build:angular": "ng build --base-href=/angular/",
     "watch:angular": "ng build --base-href=/angular/ --watch"
   },
   "engines": {

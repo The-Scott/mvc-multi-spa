@@ -1,0 +1,54 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+.razor-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.razor-nav li {
+  float: left;
+}
+
+.razor-nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+.razor-nav li a:hover {
+  background-color: #111;
+}
+
+.razor-body {
+  height: fit-content;
+
+}
+
+.razor-body h1,h2,h3,h4,h5,h6,p,text {
+  color: lightgray;
+}
+
+html {
+  background: #222;
+}
+
+.angular-spa-holder {
+  margin-bottom: 40px;
+  height: inherit;
+}
+
+.footer {
+  bottom: 0;
+  position: inherit;
+  width: 100%;
+  white-space: nowrap;
+  /* Set the fixed height of the footer here */
+  height: 30px;
+  line-height: 30px; /* Vertically center the text there */
+}
